@@ -1,12 +1,43 @@
+* {
+    font-family: 'DM Sans', sans-serif;
+}
+
 /* Navbar Section CSS Start */
 #navbar {
-    background: #071330 !important;
+    background: #832E2B !important;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030; /* adjust the z-index value according to your needs */
+}
+
+#inquire-now {
+    font-weight: 600 !important;
+    background-color: #ffffff;
+    color: #832E2B !important;
+    padding: 8px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#navbar .nav-link#inquire-now {
+    color: #832E2B !important;
+}
+
+#navbar a {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 15px;
+    text-align: left;
+    color: #ffffff !important;
 }
 
 #navbar .nav-link {
-    font-family: 'DM Sans', sans-serif;
     font-size: 22px;
-    font-weight: 350;
+    font-weight: 200;
     line-height: 20px;
     text-align: left;
     color: #ffffff !important;
@@ -23,54 +54,56 @@
 #navbar .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
-/* Navbar Section CSS Start */
+/* Navbar Section CSS End */
 
 /* Landing Section CSS Start */
+#landing {
+    background-color: #F5B83D;
+    padding: 5rem 2rem;
+}
+
 #title {
-	font-family: 'DM Sans', sans-serif;
-	font-size: 78px;
-	font-weight: 600;
-	line-height: 100px;
-	text-align: center;
+    font-size: clamp(2.5rem, 5vw + 1rem, 78px);
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: left;
     letter-spacing: 2px;
-	color: #FFFFFF;
+    color: #000000;
+    padding-left: 2rem;
+}
+
+#title #reimagined {
+    color: #ffffff;
+    background-color: #832E2B;
+    padding: 0 0.2rem;
 }
 
 #base {
-	width: Hug (171px)px;
-	height: Hug (40px)px;
-	top: 621.19px;
-	left: 754px;
-	padding: 8px 24px 8px 24px;
-	gap: 8px;
-	border-radius: 2px 0px 0px 0px;
-	opacity: 0px;
-	background: #738FA7;
-	font-family: 'DM Sans', sans-serif;
-	font-size: 22px;
-	font-weight: 600;
-	line-height: 24px;
-	text-align: center;
+    padding: 8px 24px;
+    border-radius: 2px 0px 0px 0px;
+    background: #832E2B;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
     letter-spacing: 1px;
-
-	color: #FFFFFF;
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-left: 2rem;
 }
 
-#landing {
-	background: 
-		linear-gradient(
-			rgba(0, 34, 65, 0.50),
-			rgba(0, 34, 65, 0.50)
-		),
-
-		url("./images/landing_background.png");
-
-	background-repeat: no-repeat;
-	background-size: cover;
+#landing p {
+    font-size: 30px;
+    padding-left: 2rem;
 }
 /* Landing Section CSS End */
 
 /* About Me Section CSS Start */
+#profile {
+    background-color: #832E2B;
+    padding: 3rem 0;
+}
+
 #profile img {
     width: 400px;
     height: 400px;
@@ -78,10 +111,7 @@
     border-radius: 50%;
     margin-bottom: 1.5rem;
     margin-top: 1.5rem;
-}
-
-#profile h1, #profile h3, #profile p {
-    font-family: 'DM Sans', sans-serif;
+    border: 10px solid #ffffff;
 }
 
 #profile h1 {
@@ -90,20 +120,276 @@
     line-height: 20px;
     letter-spacing: 4px;
     margin-top: 1.5rem;
-
     color: #ffffff !important;
 }
 
 #profile h3 {
     font-size: 40px;
-    font-weight: 2;
+    font-weight: 200;
     letter-spacing: 3px;
     margin-top: 1.5rem;
+    color: #ffffff !important;
 }
 
 #profile p {
-    font-size: 35px;
-    font-weight: 200;
-    letter-spacing: 3px;
+    font-size: 25px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 1.6;
+    text-align: center;
+    padding: 0 1rem;
+    color: #ffffff !important;
 }
 /* About Me Section CSS End */
+
+/* My Projects Section CSS Start */
+#projects {
+    background-color: #F5B83D !important;
+    padding: 1rem;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.card {
+    background-color: #832E2B;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30rem;
+    height: 40rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-bottom: 2px solid #F5B83D;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 1rem;
+    text-align: center;
+}
+
+.card-link {
+    display: block;
+    padding: 10px 20px;
+    background-color: #F5B83D;
+    color: #000000;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: auto;
+}
+
+.card-link:hover {
+    background-color: #f0f0f0;
+    color: #832E2B;
+}
+
+#projects h2 {
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 2px;
+    margin-top: 1.5rem;
+    color: #000000!important;
+    text-align: center;
+}
+
+.card h5 {
+    color: #ffffff !important;
+}
+
+.card h6 {
+    color: #ffffff !important;
+}
+/* My Projects Section CSS End */
+
+/* My Tools Section CSS Start */
+#tools {
+    background-color: #F5B83D;
+    padding: 10px; add some padding to the section
+}
+#tools h1 {
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    color: #000000!important;
+    text-align: center;
+}
+.tech-icons {
+    width: 100px;
+    height: 100px;
+}
+#html {
+    width: 150px;
+}
+
+#github {
+    width: 150px;
+    height: 150px;
+}  
+#javascript {
+    width: 150px;
+    /* height: 150px; */
+}
+
+.tech-icons:hover {
+    transform: scale(1.5);
+    transition: 0.8s;
+    cursor: pointer;
+}
+/* My Tools Section CSS End */
+
+/* My Contact Section CSS Start */
+#contact {
+    background: #F5B83D;
+}
+
+#contact-image {
+    background: 
+    linear-gradient(
+    rgba(0, 34, 65, 0.3),
+    rgba(0, 34, 65, 0.3)
+    ),
+    url("./images/contactimg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#social-header {
+    font-size: 45px !important;
+    font-weight: bold;
+    line-height: 1.5 !important;
+    margin-bottom: 10px;
+}
+
+.img-fluid:hover {
+    transform: scale(1.5);
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Resize social media icons */
+.img-fluid {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+#contact-header {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px;
+    color: #832E2B;
+}
+
+#contact-text {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 40px;
+    color: #FFFFFF;
+}
+
+#contact form label {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    color: #832E2B;
+}
+
+#contact form input {
+    background: #FFFFFF;
+    border: 1px solid #12C6FF;
+    border-radius: 0 !important;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    color: #003363 !important;
+}
+
+#contact form textarea {
+    background: #FFFFFF;
+    border: 1px solid #12C6FF !important;
+    border-radius: 0 !important;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    color: #003363 !important;
+    margin-top: 10px;
+}
+
+#form-btn {
+    display: block;
+    padding: 10px 20px;
+    background-color: #832E2B;
+    color: #FFFFFF;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: auto;
+}
+
+#form-btn:hover {
+    background-color: #f0f0f0;
+    color: #832E2B;
+}
+
+#social-header {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+}
+/* My Contact Section CSS End */
+
+/* Footer Section CSS Start */
+footer {
+    background: #832E2B;
+    font-size: 13px;
+    line-height: 24px;
+    text-align: center;
+    color: #003363;
+}
+
+footer h5 {
+    color: #FFFFFF;
+    font-size: 35px;
+    font-weight: 700;
+}
+
+footer p {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 400;
+}
+/* Footer Section CSS End */
